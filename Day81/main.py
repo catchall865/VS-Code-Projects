@@ -6,6 +6,11 @@ def translator(message):
 if __name__ == '__main__':
     print('Enter a message to translate into Morse Code: \n')
     
-    user_input = input('Remember to use only letters and numbers: \n')
-    
-    print(translator(user_input))
+    while True:
+        user_input = input('Please use only letters and numbers: \n')
+        if user_input is None:
+            break
+        try:
+            print(translator(user_input))
+        except KeyError:
+            print('Your message contains invalid characters. Try again or press Enter to quit. \n')
