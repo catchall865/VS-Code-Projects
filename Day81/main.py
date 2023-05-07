@@ -3,4 +3,9 @@ ENGLISH_TO_MORSE = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', '
 def translator(message):
         return ' '.join(ENGLISH_TO_MORSE[char] for char in message.upper())
 
-print(translator())
+if __name__ == '__main__':
+    print('Enter a message to translate into Morse Code: \n')
+    
+    user_input = input('Remember to use only letters and numbers: \n')
+    
+    print(translator(user_input))
